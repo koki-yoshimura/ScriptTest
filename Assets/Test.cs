@@ -10,8 +10,7 @@ public class Test : MonoBehaviour {
 
         public void Magic()
         {
-            for (int a = 0; a < 11; a++)
-            {
+
                 if (this.mp >= 5)
                 {
                     Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
@@ -23,7 +22,7 @@ public class Test : MonoBehaviour {
                     Debug.Log("MPが足りないため魔法が使えない。");
                 }
 
-            }
+            
 
         }
 
@@ -48,8 +47,11 @@ public class Test : MonoBehaviour {
         }
 
         Boss lastboss = new Boss();
-        lastboss.Magic();
 
+        for (int a = 0; a < 11; a++)
+        {
+            lastboss.Magic();
+        }
     }
 	
 	// Update is called once per frame
