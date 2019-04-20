@@ -10,32 +10,19 @@ public class Test : MonoBehaviour {
 
         public void Magic()
         {
- 
-            if (this.mp >= 5)
-                {
-                    Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
-                    mp -= 5;
-            }
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
 
-                else if(this.mp == 3)
+            if (this.mp <= 5)
             {
-                Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
-                mp -= 5;
+                Debug.Log("MPが足りないため魔法が使えない。");
+
             }
 
-            else
-
-                {
-                    Debug.Log("MPが足りないため魔法が使えない。");
-                }
-
-            
+            mp -= 5;
 
         }
 
-
     }
-     
 
     // Use this for initialization
     void Start () {
@@ -55,7 +42,7 @@ public class Test : MonoBehaviour {
 
         Boss lastboss = new Boss();
 
-        for (int a = 0; a < 12; a++)
+        for (int a = 0; a < 11; a++)
         {
             lastboss.Magic();
         }
